@@ -1,5 +1,35 @@
 {
+  "name": "swordcraftserver",
+  "version": "1.0.0",
+  "description": "WebServer for SwordCraft of Unity game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robottkang/SwordCraftServer.git"
+  },
+  "author": "robottkang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robottkang/SwordCraftServer/issues"
+  },
+  "homepage": "https://github.com/robottkang/SwordCraftServer#readme",
   "dependencies": {
-    "nodemon": "^2.0.22"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.17",
+    "@types/mongoose": "^5.11.97",
+    "@types/morgan": "^1.9.5",
+    "@types/node": "^20.6.3",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
