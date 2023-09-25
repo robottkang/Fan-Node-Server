@@ -23,3 +23,7 @@ app.use('/', routes);
 app.listen(port, ip, () => {
   console.log(`server is listening at http://${ip}:${port}.`);
 });
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
