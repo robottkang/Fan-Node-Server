@@ -16,9 +16,10 @@ mongoose.connect(mongoURI).catch((err) => {
 }).then(() => { console.log('DB connected') });
 
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/', routes);
 
-app.listen(port, () => {
-  console.log(`server is listening at http://localhost:${port}.`);
+app.listen(port, ip, () => {
+  console.log(`server is listening at http://${ip}:${port}.`);
 });
