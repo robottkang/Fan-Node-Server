@@ -2,13 +2,13 @@ import mongoose, { Document, Schema } from 'mongoose';
 
 export interface IDeck extends Document {
   name: string;
-  data: object;
-  owner: string; // 덱 소유자의 ID
+  data: object[]; // 카드 데이터들
+  owner: string;  // 덱 소유자의 이름
 }
 
 const deckSchema = new Schema({
   name: String,
-  data: Object,
+  data: [Object],
   owner: String,
 });
 
