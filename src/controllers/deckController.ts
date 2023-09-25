@@ -35,7 +35,7 @@ export const getDecks = async (req: Request, res: Response) => {
       return res.status(404).json({ message: '사용자를 찾을 수 없습니다.' });
     }
 
-    const decks = user.decks;
+    const decks = user.decks as IDeck[];
     res.status(200).json(decks);
   } catch (error) {
     console.error('에러 발생:', error);
