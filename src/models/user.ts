@@ -7,7 +7,7 @@ export interface IUser extends Document {
 
 const userSchema = new Schema({
   username: String,
-  decks: [String],
+  decks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Deck' }],
 });
 
 const User = mongoose.model<IUser>('User', userSchema);
